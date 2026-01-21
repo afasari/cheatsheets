@@ -5,6 +5,7 @@ export default defineConfig({
   description: 'Personal knowledge-base with code snippets, documentation, and command reference for backend engineering and DevOps tools',
   lang: 'en',
   
+  base: '/cheatsheets/',
   appearance: 'dark',
   
   ignoreDeadLinks: true,
