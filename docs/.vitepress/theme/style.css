@@ -152,3 +152,37 @@ kbd {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Mobile sidebar improvements */
+@media (max-width: 768px) {
+  .VPSidebar {
+    position: fixed;
+    top: var(--vp-nav-height);
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    z-index: 100;
+    transition: left 0.3s ease;
+  }
+  
+  .VPSidebar.is-open {
+    left: 0;
+  }
+  
+  .VPNavBarHamburger {
+    display: block;
+  }
+  
+  .VPSidebar.is-closed {
+    transform: translateX(-100%);
+  }
+}
+
+/* Desktop sidebar behavior */
+@media (min-width: 769px) {
+  .VPSidebar {
+    position: sticky;
+    top: var(--vp-nav-height);
+    transform: none;
+  }
+}

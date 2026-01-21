@@ -15,6 +15,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
+    siteTitle: '',
     logo: '/logo.svg',
     
     nav: [
@@ -25,12 +26,13 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Getting Started',
-        items: [
-          { text: 'Introduction', link: '/' },
-          { text: 'How to Use', link: '/guides/how-to-use' },
-          { text: 'Best Practices', link: '/guides/best-practices' }
-        ]
+         text: 'Getting Started',
+         items: [
+           { text: 'Overview', link: '/' },
+           { text: 'Introduction', link: '/getting-started' },
+           { text: 'How to Use', link: '/guides/how-to-use' },
+           { text: 'Best Practices', link: '/guides/best-practices' }
+         ]
       },
       {
         text: 'DevOps',
