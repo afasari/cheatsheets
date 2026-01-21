@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .logo-text { fill: #ffffff; }
+      .logo-bracket { fill: #60a5fa; }
+    }
+    @media (prefers-color-scheme: light) {
+      .logo-text { fill: #1f2937; }
+      .logo-bracket { fill: #2563eb; }
+    }
+  </style>
+  <text x="10" y="45" class="logo-text" font-family="Arial, sans-serif" font-size="28" font-weight="bold">
+    DevOps
+  </text>
+  <text x="10" y="65" class="logo-text" font-family="Arial, sans-serif" font-size="16" fill-opacity="0.7">
+    Cheat Sheets
+  </text>
+  <text x="150" y="55" class="logo-bracket" font-family="monospace" font-size="52" font-weight="bold">
+    {}
+  </text>
+</svg>
