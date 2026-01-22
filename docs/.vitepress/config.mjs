@@ -48,7 +48,9 @@ export default defineConfig({
               { text: 'Array', link: '/leetcode/data-structures/array' },
               { text: 'Linked List', link: '/leetcode/data-structures/linked-list' },
               { text: 'Stack', link: '/leetcode/data-structures/stack' },
-              { text: 'HashMap', link: '/leetcode/data-structures/hash-map' }
+              { text: 'HashMap', link: '/leetcode/data-structures/hash-map' },
+              { text: 'Binary Tree', link: '/leetcode/data-structures/binary-tree' },
+              { text: 'Heap', link: '/leetcode/data-structures/heap' }
             ]
           },
           {
@@ -57,7 +59,11 @@ export default defineConfig({
             items: [
               { text: 'Two Pointers', link: '/leetcode/algorithms/two-pointers' },
               { text: 'Sliding Window', link: '/leetcode/algorithms/sliding-window' },
-              { text: 'Binary Search', link: '/leetcode/algorithms/binary-search' }
+              { text: 'Binary Search', link: '/leetcode/algorithms/binary-search' },
+              { text: 'Dynamic Programming', link: '/leetcode/algorithms/dynamic-programming' },
+              { text: 'Graph Algorithms', link: '/leetcode/algorithms/graph' },
+              { text: 'Sorting Algorithms', link: '/leetcode/algorithms/sorting' },
+              { text: 'Bit Manipulation', link: '/leetcode/algorithms/bit-manipulation' }
             ]
           }
         ]
