@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed, watch } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 const props = defineProps({
   default: Object,
@@ -31,6 +31,20 @@ const setActiveLang = (lang) => {
   localStorage.setItem(storageKey, lang)
 }
 
+const handleKeyDown = (e, lang) => {
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    const idx = availableLangs.value.indexOf(lang)
+    if (e.key === 'ArrowRight') {
+      const nextIdx = (idx + 1) % availableLangs.value.length
+      setActiveLang(availableLangs.value[nextIdx])
+    } else if (e.key === 'ArrowLeft') {
+      const prevIdx = (idx - 1 + availableLangs.value.length) % availableLangs.value.length
+      setActiveLang(availableLangs.value[prevIdx])
+    }
+    e.preventDefault()
+  }
+}
+
 const detectCodeBlocks = () => {
   if (!codeContainer.value) return
   
@@ -57,18 +71,30 @@ const containerClass = computed(() => `active-lang-${activeLang.value}`)
 </script>
 
 <template>
-  <div class="leetcode-code-tabs" :class="containerClass">
-    <div class="tab-buttons">
+  <div 
+    class="leetcode-code-tabs" 
+    :class="containerClass"
+    role="tablist"
+    :aria-label="`Code examples in ${langLabels[activeLang] || 'Go'}`"
+  >
+    <div class="tab-buttons" role="tablist">
       <button 
         v-for="lang in availableLangs" 
         :key="lang"
+        :id="`tab-${lang}`"
         :class="{ active: activeLang === lang }"
         @click="setActiveLang(lang)"
+        @keydown="(e) => handleKeyDown(e, lang)"
+        :aria-label="`View ${langLabels[lang] || lang} code`"
+        :aria-selected="activeLang === lang"
+        role="tab"
+        tabindex="0"
       >
         {{ langLabels[lang] || lang }}
+        <span class="sr-only" v-if="activeLang === lang">(active)</span>
       </button>
     </div>
-    <div ref="codeContainer" class="tab-content">
+    <div ref="codeContainer" class="tab-content" role="tabpanel" :aria-labelledby="`tab-${activeLang}`">
       <slot></slot>
     </div>
   </div>
@@ -91,7 +117,7 @@ const containerClass = computed(() => `active-lang-${activeLang.value}`)
 }
 
 .tab-buttons button {
-  padding: 8px 16px;
+  padding: 10px 16px;
   background: none;
   border: none;
   border-top-left-radius: 6px;
@@ -102,6 +128,7 @@ const containerClass = computed(() => `active-lang-${activeLang.value}`)
   transition: all 0.2s;
   border: 1px solid transparent;
   border-bottom: none;
+  min-width: 60px;
 }
 
 .tab-buttons button:hover {
@@ -109,12 +136,18 @@ const containerClass = computed(() => `active-lang-${activeLang.value}`)
   background-color: var(--vp-c-bg-soft-mute);
 }
 
+.tab-buttons button:focus {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
+}
+
 .tab-buttons button.active {
   color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg);
   border-color: var(--vp-c-divider);
   margin-bottom: -1px;
-  padding-bottom: 9px;
+  padding-bottom: 11px;
+  font-weight: 600;
 }
 
 .tab-content {
@@ -154,15 +187,45 @@ const containerClass = computed(() => `active-lang-${activeLang.value}`)
   line-height: 1.6;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 @media (max-width: 768px) {
+  .leetcode-code-tabs {
+    margin: 20px 0;
+  }
+
   .tab-buttons {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--vp-c-text-2) var(--vp-c-bg-soft);
+  }
+
+  .tab-buttons::-webkit-scrollbar {
+    height: 4px;
   }
 
   .tab-buttons button {
-    white-space: nowrap;
     padding: 8px 12px;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    min-width: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-buttons button {
+    padding: 6px 10px;
+    font-size: 0.8em;
+    min-width: 45px;
   }
 }
 </style>

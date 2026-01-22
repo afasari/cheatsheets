@@ -12,7 +12,20 @@ export default defineConfig({
   
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['link', { rel: 'alternate icon', href: '/favicon.ico' }]
+    ['link', { rel: 'alternate icon', href: '/favicon.ico' }],
+    ['meta', { name: 'description', content: 'Quick reference for software engineers - Backend & DevOps cheat sheets and LeetCode data structures and algorithms with implementations in Go, Rust, Python, and JavaScript' }],
+    ['meta', { name: 'keywords', content: 'cheat sheets, devops, docker, kubernetes, terraform, helm, ansible, aws, azure, gcp, leetcode, data structures, algorithms, go, rust, python, javascript, backend, infrastructure, ci/cd, github actions, gitlab ci, jenkins, databases, postgresql, mysql, redis, mongodb, monitoring, prometheus, grafana, elk stack, loki, security, openssl, ssh, tls, oauth' }],
+    ['meta', { name: 'author', content: 'Afasari' }],
+    ['meta', { name: 'theme-color', content: '#2563eb' }],
+    ['meta', { property: 'og:title', content: 'Backend & DevOps Cheat Sheets with LeetCode' }],
+    ['meta', { property: 'og:description', content: 'Quick reference for backend engineers and DevOps with LeetCode data structures and algorithms in Go, Rust, Python, and JavaScript' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:url', content: 'https://afasari.github.io/cheatsheets/' }],
+    ['meta', { property: 'og:image', content: 'https://afasari.github.io/cheatsheets/logo.svg' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'Backend & DevOps Cheat Sheets with LeetCode' }],
+    ['meta', { name: 'twitter:description', content: 'Quick reference for backend engineers and DevOps with LeetCode data structures and algorithms' }],
+    ['link', { rel: 'canonical', href: 'https://afasari.github.io/cheatsheets/' }]
   ],
 
   themeConfig: {
