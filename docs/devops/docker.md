@@ -54,14 +54,14 @@ Containerization platform for developing, shipping, and running applications.
 
 | COMMAND | DESCRIPTION |
 | --- | --- |
-| `docker-compose up` | Create and start services |
-| `docker-compose up -d` | Start services in background |
-| `docker-compose down` | Stop and remove services |
-| `docker-compose ps` | List services |
-| `docker-compose logs` | View service logs |
-| `docker-compose exec <service> <cmd>` | Execute command in service |
-| `docker-compose build` | Rebuild services |
-| `docker-compose pull` | Pull service images |
+| `docker compose up` | Create and start services |
+| `docker compose up -d` | Start services in background |
+| `docker compose down` | Stop and remove services |
+| `docker compose ps` | List services |
+| `docker compose logs` | View service logs |
+| `docker compose exec <service> <cmd>` | Execute command in service |
+| `docker compose build` | Rebuild services |
+| `docker compose pull` | Pull service images |
 
 ## Cleanup
 
@@ -138,5 +138,5 @@ docker export <container> > backup.tar
 - Set resource limits for production containers
 
 ::: tip
-Use `docker-compose` for multi-container applications and Docker Swarm for orchestration at scale.
+Use `docker compose` for multi-container applications and Docker Swarm for orchestration at scale.
 :::

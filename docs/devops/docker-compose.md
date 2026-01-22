@@ -1,34 +1,46 @@
 # Docker Compose Cheatsheet
 
+## Docker Compose v2
+
+Docker Compose v2 is integrated directly into Docker CLI (2023+).
+
+**Key Changes from v1:**
+- Command changed: `docker-compose` → `docker compose` (note the space)
+- The `version` field in compose files is **optional** (removed in v2)
+- Built into Docker Desktop and modern Docker Engine
+- Better performance and integration with Docker CLI
+
+**Note:** v1 (`docker-compose` with hyphen) is still available via standalone install but considered legacy.
+
 ## Essential Commands
 
 ```bash
 # Basic operations
-docker-compose up                    # Start services (detached: -d)
-docker-compose down                  # Stop and remove containers
-docker-compose up -d --force-recreate  # Recreate all containers
-docker-compose restart                # Restart services
-docker-compose pause                  # Pause services
-docker-compose unpause                # Unpause services
+docker compose up                    # Start services (detached: -d)
+docker compose down                  # Stop and remove containers
+docker compose up -d --force-recreate  # Recreate all containers
+docker compose restart                # Restart services
+docker compose pause                  # Pause services
+docker compose unpause                # Unpause services
 
 # Build and run
-docker-compose build                  # Build images
-docker-compose up --build             # Build and start
-docker-compose build --no-cache       # Build without cache
-docker-compose build --parallel       # Build images in parallel
+docker compose build                  # Build images
+docker compose up --build             # Build and start
+docker compose build --no-cache       # Build without cache
+docker compose build --parallel       # Build images in parallel
 
 # Execute commands
-docker-compose exec <service> <cmd>   # Execute in running container
-docker-compose run --rm <service> <cmd>  # Run one-off command
-docker-compose ps                     # List containers
-docker-compose logs -f                # Follow logs
-docker-compose logs <service>         # Service-specific logs
+docker compose exec <service> <cmd>   # Execute in running container
+docker compose run --rm <service> <cmd>  # Run one-off command
+docker compose ps                     # List containers
+docker compose logs -f                # Follow logs
+docker compose logs <service>         # Service-specific logs
 ```
 
 ## Compose File Structure
 
 ```yaml
-version: '3.8'
+# version field is optional in Docker Compose v2
 
 services:
   web:
@@ -79,7 +91,7 @@ networks:
 ## Multi-Stage Builds
 
 ```yaml
-version: '3.8'
+# version field is optional in Docker Compose v2
 
 services:
   app:
@@ -95,7 +107,7 @@ services:
 ## Production Patterns
 
 ```yaml
-version: '3.8'
+# version field is optional in Docker Compose v2
 
 services:
   web:
@@ -203,8 +215,6 @@ volumes:
 
 ```yaml
 # docker-compose.yml
-version: '3.8'
-
 services:
   app:
     build: .
@@ -218,8 +228,6 @@ services:
 
 ---
 # docker-compose.prod.yml
-version: '3.8'
-
 services:
   app:
     image: myapp:${VERSION}
@@ -227,7 +235,7 @@ services:
       - DEBUG=false
     restart: always
 
-# Usage: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+# Usage: docker compose -f docker-compose.yml -f docker-compose.prod.yml up
 ```
 
 ## Common Services
@@ -307,25 +315,25 @@ services:
 
 ```bash
 # View container logs
-docker-compose logs -f --tail=100 <service>
+docker compose logs -f --tail=100 <service>
 
 # Execute in container
-docker-compose exec <service> sh
+docker compose exec <service> sh
 
 # Remove all containers and volumes
-docker-compose down -v
+docker compose down -v
 
 # Check resource usage
-docker-compose top
+docker compose top
 
 # Validate compose file
-docker-compose config
+docker compose config
 
 # Debug port conflicts
-docker-compose config --services
+docker compose config --services
 
 # Run container with all env vars
-docker-compose run --rm <service> env
+docker compose run --rm <service> env
 ```
 
 ## Performance Tips
