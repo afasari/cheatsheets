@@ -257,6 +257,7 @@ az vm create \
 ## Further Reading
 
 - [Azure CLI](./azure.md) - Azure CLI commands and usage
+- [Azure Bicep](./bicep.md) - Azure Infrastructure as Code (IaC)
 - [Azure Services](https://azure.microsoft.com/services/) - Full Azure service catalog
 - [Azure Documentation](https://docs.microsoft.com/azure/) - Official Azure documentation
 - [Azure Architecture Center](https://docs.microsoft.com/azure/architecture/) - Architecture patterns and best practices

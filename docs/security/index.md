@@ -249,3 +249,5 @@ Record security-relevant events for compliance and investigation.
 - [SSH Keys](./ssh) - SSH key management and configuration
 - [TLS Certificates](./tls) - Certificate management and troubleshooting
 - [OAuth 2.0](./oauth) - Authorization framework
+- [Secrets Management](./secrets-management) - AWS Secrets Manager, Azure Key Vault, HashiCorp Vault
+- [Network Security](./network-security) - WAF, DDoS protection, firewalls

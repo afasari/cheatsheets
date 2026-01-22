@@ -123,6 +123,8 @@ export default defineConfig({
             items: [
               { text: 'Terraform', link: '/devops/terraform' },
               { text: 'Ansible', link: '/devops/ansible' },
+              { text: 'Chef', link: '/devops/chef' },
+              { text: 'Puppet', link: '/devops/puppet' },
               { text: 'Azure DevOps', link: '/devops/azure-devops' }
             ]
           }
@@ -133,6 +135,7 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/cloud/' },
           { text: 'Cloud Networking', link: '/cloud/cloud-networking' },
+          { text: 'Cost Management', link: '/cloud/cost-management' },
           { text: 'Terraform Cloud', link: '/cloud/terraform-cloud' },
           {
             text: 'AWS',
@@ -144,7 +147,8 @@ export default defineConfig({
               { text: 'EC2 (Compute)', link: '/cloud/aws/aws-ec2' },
               { text: 'Lambda (Serverless)', link: '/cloud/aws/aws-lambda' },
               { text: 'IAM (Security)', link: '/cloud/aws/aws-iam' },
-              { text: 'CloudWatch', link: '/cloud/aws/cloudwatch-alerting' }
+              { text: 'CloudWatch', link: '/cloud/aws/cloudwatch-alerting' },
+              { text: 'CloudFormation', link: '/cloud/aws/cloudformation' }
             ]
           },
           {
@@ -152,7 +156,8 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Overview', link: '/cloud/azure/' },
-              { text: 'Azure CLI', link: '/cloud/azure' }
+              { text: 'Azure CLI', link: '/cloud/azure' },
+              { text: 'Bicep (IaC)', link: '/cloud/azure/bicep' }
             ]
           },
           { text: 'Google Cloud (gcloud)', link: '/cloud/gcp' }
@@ -165,6 +170,7 @@ export default defineConfig({
           { text: 'GitHub Actions', link: '/ci-cd/github-actions' },
           { text: 'GitLab CI', link: '/ci-cd/gitlab-ci' },
           { text: 'Jenkins', link: '/ci-cd/jenkins' },
+          { text: 'CircleCI', link: '/ci-cd/circleci' },
           { text: 'ArgoCD', link: '/ci-cd/argocd' }
         ]
       },
@@ -202,7 +208,10 @@ export default defineConfig({
           { text: 'Prometheus', link: '/monitoring/prometheus' },
           { text: 'Grafana', link: '/monitoring/grafana' },
           { text: 'ELK Stack', link: '/monitoring/elk' },
-          { text: 'Loki', link: '/monitoring/loki' }
+          { text: 'Loki', link: '/monitoring/loki' },
+          { text: 'Datadog', link: '/monitoring/datadog' },
+          { text: 'OpenTelemetry', link: '/monitoring/opentelemetry' },
+          { text: 'Jaeger', link: '/monitoring/jaeger' }
         ]
       },
       {
@@ -212,7 +221,9 @@ export default defineConfig({
           { text: 'OpenSSL', link: '/security/openssl' },
           { text: 'SSH Keys', link: '/security/ssh' },
           { text: 'TLS Certificates', link: '/security/tls' },
-          { text: 'OAuth 2.0', link: '/security/oauth' }
+          { text: 'OAuth 2.0', link: '/security/oauth' },
+          { text: 'Secrets Management', link: '/security/secrets-management' },
+          { text: 'Network Security', link: '/security/network-security' }
         ]
       },
       {
@@ -222,7 +233,9 @@ export default defineConfig({
           { text: 'Git', link: '/other/git' },
           { text: 'Linux Commands', link: '/other/linux' },
           { text: 'Network Tools', link: '/other/network' },
-          { text: 'HTTP Status Codes', link: '/other/http-codes' }
+          { text: 'HTTP Status Codes', link: '/other/http-codes' },
+          { text: 'Python', link: '/other/python' },
+          { text: 'FastAPI', link: '/other/fastapi' }
         ]
       }
     ],

@@ -240,3 +240,5 @@ Secure remote access and command execution.
 - [Network Tools](./network) - Network diagnostics and troubleshooting
 - [HTTP Status Codes](./http-codes) - HTTP response reference
 - [SSH Keys](../security/ssh) - SSH key management
+- [Python](./python) - Python programming language
+- [FastAPI](./fastapi) - Python web framework

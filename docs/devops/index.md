@@ -39,6 +39,8 @@ Collecting metrics, logs, and traces to understand system behavior and performan
 | | Docker Compose | Multi-container apps | Development, simple deployments |
 | **IaC** | Terraform | Multi-cloud infrastructure | Managing cloud resources |
 | | Ansible | Configuration management | Server provisioning |
+| | Chef | Configuration management | Infrastructure automation |
+| | Puppet | Configuration management | Infrastructure automation |
 | **CI/CD** | GitHub Actions | GitHub-based projects | Open source, GitHub workflows |
 | | Jenkins | Self-hosted CI/CD | On-premise, custom pipelines |
 | | ArgoCD | GitOps workflows | Kubernetes deployments |

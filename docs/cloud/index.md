@@ -115,6 +115,7 @@ Isolated network environment in the cloud where you can deploy resources.
 ## Getting Started Guides
 
 - [Cloud Networking](./cloud-networking) - Network design and implementation
+- [Cost Management](./cost-management) - Cloud cost optimization and monitoring
 - [AWS](./aws/) - AWS services and CLI
 - [Azure](./azure/) - Azure services and CLI
 - [Google Cloud](./gcp) - GCP services and CLI

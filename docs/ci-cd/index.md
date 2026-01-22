@@ -138,5 +138,6 @@ Release features behind configuration flags without deploying new code.
 - [GitHub Actions](./github-actions) - Build, test, and deploy with GitHub
 - [GitLab CI](./gitlab-ci) - Integrated CI/CD in GitLab
 - [Jenkins](./jenkins) - Self-hosted automation server
+- [CircleCI](./circleci) - Hosted CI/CD platform
 - [ArgoCD](./argocd) - GitOps for Kubernetes
 - [CI/CD Concepts](../devops/cicd-concepts) - Deep dive into CI/CD patterns

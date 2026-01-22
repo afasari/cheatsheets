@@ -286,6 +286,7 @@ aws s3 mb s3://my-unique-bucket-name
 - **[AWS Lambda](./aws-lambda)** - Serverless functions
 - **[AWS IAM](./aws-iam)** - Identity and access management
 - **[Amazon CloudWatch](./cloudwatch-alerting)** - Monitoring and alerting
+- **[AWS CloudFormation](./cloudformation)** - Infrastructure as Code (IaC)
 
 ## Further Reading
 

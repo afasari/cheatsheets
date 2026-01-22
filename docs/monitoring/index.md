@@ -212,4 +212,7 @@ with tracer.start_as_current_span("operation"):
 - [Grafana](./grafana) - Visualization and dashboards
 - [ELK Stack](./elk) - Elasticsearch, Logstash, Kibana
 - [Loki](./loki) - Prometheus-style logging
+- [Datadog](./datadog) - Cloud monitoring and analytics platform
+- [OpenTelemetry](./opentelemetry) - Observability framework
+- [Jaeger](./jaeger) - Distributed tracing platform
 - [Monitoring Concepts](../devops/monitoring-concepts) - Deep dive into monitoring strategies
