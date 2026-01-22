@@ -21,11 +21,12 @@ export default defineConfig({
     
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'LeetCode', link: '/leetcode/' },
       { text: 'Guides', link: '/guides/' },
       { text: 'GitHub', link: 'https://github.com/afasari/cheatsheets' }
     ],
 
-    sidebar: [
+     sidebar: [
       {
          text: 'Getting Started',
          items: [
@@ -33,7 +34,21 @@ export default defineConfig({
            { text: 'Introduction', link: '/getting-started' },
            { text: 'How to Use', link: '/guides/how-to-use' },
            { text: 'Best Practices', link: '/guides/best-practices' }
-         ]
+          ]
+      },
+      {
+        text: 'LeetCode',
+        items: [
+          { text: 'Overview', link: '/leetcode/' },
+          { text: 'Big O Complexity', link: '/leetcode/big-o' },
+          {
+            text: 'Data Structures',
+            collapsed: true,
+            items: [
+              { text: 'Array', link: '/leetcode/data-structures/array' }
+            ]
+          }
+        ]
       },
       {
         text: 'DevOps',

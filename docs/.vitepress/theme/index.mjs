@@ -1,9 +1,13 @@
 import DefaultTheme from 'vitepress/theme'
+import { onMounted, nextTick } from 'vue'
 import './style.css'
-import { onMounted, h, nextTick } from 'vue'
+import CodeTabs from './components/CodeTabs.vue'
 
 export default {
   extends: DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('CodeTabs', CodeTabs)
+  },
   setup() {
     onMounted(() => {
       nextTick(() => {
