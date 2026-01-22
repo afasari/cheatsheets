@@ -45,7 +45,19 @@ export default defineConfig({
             text: 'Data Structures',
             collapsed: true,
             items: [
-              { text: 'Array', link: '/leetcode/data-structures/array' }
+              { text: 'Array', link: '/leetcode/data-structures/array' },
+              { text: 'Linked List', link: '/leetcode/data-structures/linked-list' },
+              { text: 'Stack', link: '/leetcode/data-structures/stack' },
+              { text: 'HashMap', link: '/leetcode/data-structures/hash-map' }
+            ]
+          },
+          {
+            text: 'Algorithms',
+            collapsed: true,
+            items: [
+              { text: 'Two Pointers', link: '/leetcode/algorithms/two-pointers' },
+              { text: 'Sliding Window', link: '/leetcode/algorithms/sliding-window' },
+              { text: 'Binary Search', link: '/leetcode/algorithms/binary-search' }
             ]
           }
         ]
