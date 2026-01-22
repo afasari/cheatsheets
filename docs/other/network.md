@@ -195,7 +195,7 @@ tcpdump -i eth0 not port 22
 ## Wireshark
 
 ### Useful Display Filters
-```wireshark
+```text
 # HTTP
 http
 

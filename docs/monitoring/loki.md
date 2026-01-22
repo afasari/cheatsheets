@@ -102,7 +102,7 @@ scrape_configs:
 
 ### Basic Queries
 
-```logql
+```sql
 # Label selector
 {job="varlogs"}
 
@@ -121,7 +121,7 @@ scrape_configs:
 
 ### Line Filter
 
-```logql
+```sql
 {job="varlogs"} |= "error"
 {job="varlogs"} |= "error" | grep "database"
 {job="varlogs"} != "debug"
@@ -131,38 +131,38 @@ scrape_configs:
 ### Pipeline Operators
 
 ### Line Format
-```logql
+```sql
 {job="varlogs"} | line_format "{{.level}}: {{.message}}"
 ```
 
 ### Labels Format
-```logql
+```sql
 {job="varlogs"} | label_format level={{.level}},service={{.service}}
 ```
 
 ### JSON Parser
-```logql
+```sql
 {job="varlogs"} | json level="level", message="msg"
 ```
 
 ### Regexp Parser
-```logql
+```sql
 {job="varlogs"} | regexp "(?P<level>\\w+): (?P<message>.*)"
 ```
 
 ### Unwrap
-```logql
+```sql
 {job="varlogs"} | unwrap duration_ms
 ```
 
 ### Label Extractor
-```logql
+```sql
 {job="varlogs"} | label_format status={{status}}
 ```
 
 ## Aggregation Operators
 
-```logql
+```sql
 # Count
 count_over_time({job="varlogs"}[5m])
 
@@ -205,42 +205,42 @@ bottomk(10, sum by (level) ({job="varlogs"}))
 ## Examples
 
 ### Search by content
-```logql
+```sql
 {job="app"} |= "error" | grep "database"
 ```
 
 ### Count errors over time
-```logql
+```sql
 sum(count_over_time({level="error"}[5m]))
 ```
 
 ### Error rate
-```logql
+```sql
 rate({level="error"}[5m])
 ```
 
 ### Filter by time
-```logql
+```sql
 {job="varlogs"} | line_format "{{.timestamp}} {{.message}}"
 ```
 
 ### Parse JSON logs
-```logql
+```sql
 {job="app"} | json | level="error"
 ```
 
 ### Extract labels from logs
-```logql
+```sql
 {job="app"} | regexp "(?P<method>\\w+) (?P<path>\\S+)" | method
 ```
 
 ### Combine queries
-```logql
+```sql
 {job="app"} |= "error" or {job="app"} |= "warning"
 ```
 
 ### Log volume by service
-```logql
+```sql
 sum by (service) (count_over_time({job="app"}[1h]))
 ```
 
@@ -254,7 +254,7 @@ sum by (service) (count_over_time({job="app"}[1h]))
 5. Click "Save & Test"
 
 ### Query in Grafana
-```logql
+```sql
 {job="varlogs"} |= "error"
 ```
 

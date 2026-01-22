@@ -54,7 +54,7 @@ ssh-keygen -t ed25519 -C "user@example.com"
 ## SSH Config
 
 ### Configuration File (~/.ssh/config)
-```ssh
+```ini
 Host example
   HostName example.com
   User username
@@ -177,7 +177,7 @@ ssh-add -D
 ```
 
 ### Authorized Keys (~/.ssh/authorized_keys)
-```ssh
+```ini
 # Add public key
 echo "ssh-rsa AAAAB3... user@example.com" >> ~/.ssh/authorized_keys
 

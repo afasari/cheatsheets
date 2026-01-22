@@ -387,7 +387,7 @@ ansible-playbook playbook.yml -e "package_name=apache2"
 ```
 
 ### Template Example
-```jinja2
+```jinja
 # config.j2
 [general]
 port = {{ app_port }}

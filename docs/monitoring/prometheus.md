@@ -71,7 +71,7 @@ scrape_configs:
 
 ### Basic Queries
 
-```promql
+```sql
 # Simple metric
 metric_name
 
@@ -113,7 +113,7 @@ metric_name{label!~"pattern"}
 
 ### Time-based Queries
 
-```promql
+```sql
 # Last 5 minutes
 metric_name[5m]
 
@@ -144,7 +144,7 @@ sum_over_time(metric_name[5m])
 
 ### Aggregation Functions
 
-```promql
+```sql
 # Sum by label
 sum(metric_name) by (label)
 
@@ -178,7 +178,7 @@ stdvar(metric_name)
 
 ### Examples
 
-```promql
+```sql
 # CPU usage
 rate(process_cpu_seconds_total[5m])
 

@@ -63,7 +63,9 @@ export default defineConfig({
               { text: 'Stack', link: '/leetcode/data-structures/stack' },
               { text: 'HashMap', link: '/leetcode/data-structures/hash-map' },
               { text: 'Binary Tree', link: '/leetcode/data-structures/binary-tree' },
-              { text: 'Heap', link: '/leetcode/data-structures/heap' }
+              { text: 'Heap', link: '/leetcode/data-structures/heap' },
+              { text: 'Queue', link: '/leetcode/data-structures/queue' },
+              { text: 'Trie', link: '/leetcode/data-structures/trie' }
             ]
           },
           {

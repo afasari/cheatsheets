@@ -139,7 +139,7 @@ GET /index/_search
 ## Logstash
 
 ### Configuration
-```conf
+```ini
 input {
   file {
     path => "/var/log/*.log"
@@ -352,7 +352,7 @@ curl -X POST "localhost:9200/_bulk" \
 ## Logstash Patterns
 
 ### Grok Patterns
-```conf
+```text
 # Apache combined log
 %{COMBINEDAPACHELOG}
 
@@ -364,7 +364,7 @@ curl -X POST "localhost:9200/_bulk" \
 ```
 
 ### Custom Patterns
-```conf
+```text
 # In patterns directory
 MYNUM \d+
 MYWORD \w+

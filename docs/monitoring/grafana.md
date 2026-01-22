@@ -151,7 +151,7 @@ curl -X DELETE \
 ### Panel Queries
 
 ### Prometheus
-```promql
+```sql
 # Rate
 rate(http_requests_total[5m])
 
@@ -171,7 +171,7 @@ SELECT mean(value) FROM "cpu" WHERE $timeFilter GROUP BY time($__interval)
 ```
 
 ### Loki
-```logql
+```sql
 {job="myapp"} |= "error"
 ```
 
