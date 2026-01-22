@@ -55,5 +55,7 @@ Feel free to suggest additions, report issues, or submit pull requests. These ch
 
 - [LeetCode Cheat Sheet](/leetcode/) - Data structures and algorithms
 - [DevOps Cheat Sheets](/devops/docker) - Containerization and infrastructure
-- [Cloud CLI Commands](/cloud/aws) - AWS, Azure, GCP
+- [AWS CLI](/cloud/aws/aws-cli) - AWS CLI commands
+- [Azure CLI](/cloud/azure) - Azure CLI commands
+- [Google Cloud (gcloud)](/cloud/gcp) - GCP CLI commands
 - [CI/CD Workflows](/ci-cd/github-actions) - Automation pipelines

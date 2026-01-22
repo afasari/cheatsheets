@@ -86,25 +86,82 @@ export default defineConfig({
       {
         text: 'DevOps',
         items: [
-          { text: 'Docker', link: '/devops/docker' },
-          { text: 'Kubernetes (kubectl)', link: '/devops/kubernetes' },
-          { text: 'Terraform', link: '/devops/terraform' },
-          { text: 'Helm', link: '/devops/helm' },
-          { text: 'Ansible', link: '/devops/ansible' }
+          { text: 'Overview', link: '/devops/' },
+          {
+            text: 'Concepts',
+            collapsed: true,
+            items: [
+              { text: 'IaC Concepts', link: '/devops/iac-concepts' },
+              { text: 'Containerization Concepts', link: '/devops/containerization-concepts' },
+              { text: 'CI/CD Concepts', link: '/devops/cicd-concepts' },
+              { text: 'Monitoring Concepts', link: '/devops/monitoring-concepts' }
+            ]
+          },
+          {
+            text: 'Container Tools',
+            collapsed: true,
+            items: [
+              { text: 'Docker', link: '/devops/docker' },
+              { text: 'Docker Compose', link: '/devops/docker-compose' },
+              { text: 'Podman', link: '/devops/podman' },
+              { text: 'BuildKit', link: '/devops/buildkit' },
+              { text: 'Registry', link: '/devops/registry' },
+              { text: 'Systemd', link: '/devops/systemd' }
+            ]
+          },
+          {
+            text: 'Orchestration',
+            collapsed: true,
+            items: [
+              { text: 'Kubernetes (kubectl)', link: '/devops/kubernetes' },
+              { text: 'Helm', link: '/devops/helm' }
+            ]
+          },
+          {
+            text: 'Infrastructure as Code',
+            collapsed: true,
+            items: [
+              { text: 'Terraform', link: '/devops/terraform' },
+              { text: 'Ansible', link: '/devops/ansible' },
+              { text: 'Azure DevOps', link: '/devops/azure-devops' }
+            ]
+          }
         ]
       },
       {
         text: 'Cloud Platforms',
         items: [
-          { text: 'AWS CLI', link: '/cloud/aws' },
-          { text: 'Azure CLI', link: '/cloud/azure' },
-          { text: 'Google Cloud (gcloud)', link: '/cloud/gcp' },
-          { text: 'Terraform Cloud', link: '/cloud/terraform-cloud' }
+          { text: 'Overview', link: '/cloud/' },
+          { text: 'Cloud Networking', link: '/cloud/cloud-networking' },
+          { text: 'Terraform Cloud', link: '/cloud/terraform-cloud' },
+          {
+            text: 'AWS',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/cloud/aws/' },
+              { text: 'AWS CLI', link: '/cloud/aws/aws-cli' },
+              { text: 'S3 (Storage)', link: '/cloud/aws/aws-s3' },
+              { text: 'EC2 (Compute)', link: '/cloud/aws/aws-ec2' },
+              { text: 'Lambda (Serverless)', link: '/cloud/aws/aws-lambda' },
+              { text: 'IAM (Security)', link: '/cloud/aws/aws-iam' },
+              { text: 'CloudWatch', link: '/cloud/aws/cloudwatch-alerting' }
+            ]
+          },
+          {
+            text: 'Azure',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/cloud/azure/' },
+              { text: 'Azure CLI', link: '/cloud/azure' }
+            ]
+          },
+          { text: 'Google Cloud (gcloud)', link: '/cloud/gcp' }
         ]
       },
       {
         text: 'CI/CD',
         items: [
+          { text: 'Overview', link: '/ci-cd/' },
           { text: 'GitHub Actions', link: '/ci-cd/github-actions' },
           { text: 'GitLab CI', link: '/ci-cd/gitlab-ci' },
           { text: 'Jenkins', link: '/ci-cd/jenkins' },
@@ -114,16 +171,34 @@ export default defineConfig({
       {
         text: 'Databases',
         items: [
-          { text: 'PostgreSQL', link: '/databases/postgresql' },
-          { text: 'MySQL', link: '/databases/mysql' },
-          { text: 'Redis', link: '/databases/redis' },
-          { text: 'MongoDB', link: '/databases/mongodb' },
-          { text: 'SQLite', link: '/databases/sqlite' }
+          { text: 'Overview', link: '/databases/' },
+          {
+            text: 'Relational',
+            collapsed: true,
+            items: [
+              { text: 'PostgreSQL', link: '/databases/postgresql' },
+              { text: 'PostgreSQL Internals', link: '/databases/postgresql-internals' },
+              { text: 'MySQL', link: '/databases/mysql' },
+              { text: 'SQLite', link: '/databases/sqlite' },
+              { text: 'SQLite Optimization', link: '/databases/sqlite-optimization' }
+            ]
+          },
+          {
+            text: 'NoSQL',
+            collapsed: true,
+            items: [
+              { text: 'MongoDB', link: '/databases/mongodb' },
+              { text: 'MongoDB Aggregation', link: '/databases/mongodb-aggregation' },
+              { text: 'Redis', link: '/databases/redis' },
+              { text: 'Redis Patterns', link: '/databases/redis-patterns' }
+            ]
+          }
         ]
       },
       {
         text: 'Monitoring & Logging',
         items: [
+          { text: 'Overview', link: '/monitoring/' },
           { text: 'Prometheus', link: '/monitoring/prometheus' },
           { text: 'Grafana', link: '/monitoring/grafana' },
           { text: 'ELK Stack', link: '/monitoring/elk' },
@@ -133,6 +208,7 @@ export default defineConfig({
       {
         text: 'Security',
         items: [
+          { text: 'Overview', link: '/security/' },
           { text: 'OpenSSL', link: '/security/openssl' },
           { text: 'SSH Keys', link: '/security/ssh' },
           { text: 'TLS Certificates', link: '/security/tls' },
@@ -142,6 +218,7 @@ export default defineConfig({
       {
         text: 'Other Tools',
         items: [
+          { text: 'Overview', link: '/other/' },
           { text: 'Git', link: '/other/git' },
           { text: 'Linux Commands', link: '/other/linux' },
           { text: 'Network Tools', link: '/other/network' },
